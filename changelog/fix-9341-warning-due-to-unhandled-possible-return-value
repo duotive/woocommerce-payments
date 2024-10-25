@@ -1,0 +1,5 @@
+Significance: patch
+Type: fix
+
+When going through checkout without a payment method, the plugin throws an warning with: Attempt to read property "id" on false.
+The wc_get_payment_gateway_by_order method can return a false, but that is not considered in the code.
